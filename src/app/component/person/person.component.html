@@ -1,0 +1,12 @@
+
+<ng-container *ngIf="personForm$ | async as personForm">
+  <form novalidate [ngrxFormState]="personForm">
+    <label>First Name:</label>
+    <input type="text" [ngrxFormControlState]="personForm.controls.firstName" />
+    <label>Last Name:</label>
+    <input type="text" [ngrxFormControlState]="personForm.controls.lastName" />
+    <label>Age:</label>
+    <input type="number" [ngrxFormControlState]="personForm.controls.age" />
+  </form>
+</ng-container>
+

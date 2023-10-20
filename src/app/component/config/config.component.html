@@ -1,0 +1,7 @@
+
+<ng-container *ngIf="configForm$ | async as configForm">
+  <form novalidate [ngrxFormState]="configForm">
+    <label>Min Age:</label>
+    <input type="number" [ngrxFormControlState]="configForm.controls.minAge" />
+  </form>
+</ng-container>
